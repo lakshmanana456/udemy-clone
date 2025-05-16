@@ -43,18 +43,24 @@ body {
 
 .navbar__s2 input:focus {
     outline: none;
-}  
+}
 
 .navbar__s3 {
     display: flex;
     gap: 10px;
     align-items: center;
 }
-.mylearning{
+
+.navbar__s4 {
+    display: none;
+}
+
+.mylearning {
     position: relative;
     cursor: pointer;
 }
-.mylearning__popup{
+
+.mylearning__popup {
     position: absolute;
     background-color: white;
     border: solid black 1px;
@@ -65,7 +71,7 @@ body {
     display: none;
 }
 
-.mylearning:hover .mylearning__popup{
+.mylearning:hover .mylearning__popup {
     display: block;
 }
 
@@ -86,13 +92,13 @@ body {
 }
 
 .category p:hover {
-   transition: 1s;
-   background-color: transparent;
-   color: black;
-   border: solid #A435F0 1px;
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    border: solid #A435F0 1px;
 }
 
-.sale-image{
+.sale-image {
     position: relative;
 }
 
@@ -100,7 +106,7 @@ body {
     width: 100%;
 }
 
-.sale-image__offer{
+.sale-image__offer {
     position: absolute;
     top: 10%;
     left: 10%;
@@ -116,11 +122,12 @@ body {
 }
 
 @keyframes zoom {
-    0%{
+    0% {
         transform: scale(0);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: scale(1);
         opacity: 1;
     }
@@ -138,13 +145,14 @@ body {
 }
 
 .course__card {
-    width: 250px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 
 .course__card img {
+    height: 60%;
     width: 100%;
-    height: 50%;
-    
 }
 
 .topics {
@@ -171,7 +179,6 @@ body {
 
 .popular__container {
     margin-top: 10px;
-    margin-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -183,13 +190,13 @@ body {
     padding: 30px;
 }
 
-.footer__one p {
-    margin: 20px;
-}
-
 .footer__one {
     display: flex;
-    gap: 50px;
+    gap: 10px;
+}
+
+.footer__one p {
+    margin: 20px;
 }
 
 .footer__two {
@@ -200,3 +207,27 @@ body {
 }
 
 /* media query */
+@media screen and (max-width:800px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .course__card {
+        flex-basis: 40%;
+    }
+
+    .category {
+        display: none;
+    }
+
+    .navbar__s2,
+    .navbar__s3 {
+        display: none;
+    }
+
+    .navbar__s4 {
+        display: block;
+    }
+}

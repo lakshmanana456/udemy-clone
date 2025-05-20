@@ -36,6 +36,4 @@ Follows a similar layout to the recommendation section
 5. 📩 Footer Section
 Contains links to About, Careers, Blog, Help, Terms, Privacy
 
-Social media icons (if included)
 
-Simple copyright
